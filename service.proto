@@ -1,0 +1,26 @@
+syntax = "proto3";
+package ummsgo;
+option go_package = "./;";
+
+service UserService {
+	rpc RegisterUser (RegisterUserRequest) returns (RegisterUserResponse);
+	rpc GetUser(GetUserRequest) returns (GetUserResponse);
+}
+
+message RegisterUserRequest {
+	string username = 1;
+	string email = 2;
+}
+
+message RegisterUserResponse {
+	string response_message = 1;
+}
+
+message GetUserRequest {
+	string username = 1;
+}
+
+message GetUserResponse {
+	string username = 1;
+	string email = 2;
+}

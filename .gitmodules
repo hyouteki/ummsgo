@@ -1,0 +1,3 @@
+[submodule "go-mode.el"]
+	path = go-mode.el
+	url = https://github.com/dominikh/go-mode.el
